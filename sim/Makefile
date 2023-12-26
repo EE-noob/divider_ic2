@@ -40,9 +40,9 @@ versim: run_vcs vd
 fl:
 	find ../rtl -name "*v" > rtl_list.f;find ../tc -name "*v" > sim_list.f;
 srtfl:
-	find ../rtl -maxdepth 1 -type f -name "*v" > rtl_list.f;find ../tb -name "srt2_tb.sv" > sim_list.f;
+	find ../rtl -maxdepth 1 -type f -name "*v" > rtl_list.f;find ../tb -name "srt2_tb.v" > sim_list.f;
 fpfl:
-	find ../rtl -maxdepth 1 -type f -name "*v" > rtl_list.f;find ../tb -name "fp_tb.sv" > sim_list.f;
+	find ../rtl -maxdepth 1 -type f -name "*v" > rtl_list.f;find ../tb -name "fp_tb.v" > sim_list.f;
 run_vcs:
 	$(NOR_VCS) $(VERDI_SW) $(RUN_VER)
 vd:
