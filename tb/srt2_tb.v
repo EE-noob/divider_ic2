@@ -435,15 +435,15 @@ end
 
 end
 
-always@(posedge clk)
-        begin
-         $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
-        end
+// always@(posedge clk)
+//         begin
+//          $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
+//         end
 
-always@(negedge clk)
-        begin
-         $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
-        end   
+// always@(negedge clk)
+//         begin
+//          $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
+//         end   
 
 
 endmodule
