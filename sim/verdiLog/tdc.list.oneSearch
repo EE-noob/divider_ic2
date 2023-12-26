@@ -1,0 +1,14 @@
+../rtl/fifo_out_top.v
+../rtl/divr2.v
+../rtl/fp32top.v
+../rtl/fifo_top.v
+../rtl/pre_process.v
+../tb/srt2_tb.v
+../rtl/top.v
+../rtl/parallel2serial.v
+../rtl/InlineBlackBoxLut.v
+../rtl/fifo_in.v
+../rtl/top_r2.v
+../rtl/fifo_in_top.v
+../rtl/fifo_out.v
+../rtl/serial2parallel.v

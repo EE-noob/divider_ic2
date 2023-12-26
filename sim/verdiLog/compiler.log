@@ -1,0 +1,25 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -sv
+    -f rtl_list.f
+        ../rtl/InlineBlackBoxLut.v
+        ../rtl/divr2.v
+        ../rtl/fifo_in.v
+        ../rtl/fifo_in_top.v
+        ../rtl/fifo_out.v
+        ../rtl/fifo_out_top.v
+        ../rtl/fifo_top.v
+        ../rtl/fp32top.v
+        ../rtl/parallel2serial.v
+        ../rtl/pre_process.v
+        ../rtl/serial2parallel.v
+        ../rtl/top.v
+        ../rtl/top_r2.v
+    -f sim_list.f
+        ../tb/srt2_tb.v
+
+Highest level modules:
+srt2_tb
+
+Total	0 error(s),   0 warning(s)

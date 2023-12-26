@@ -1,1 +1,13 @@
-divr2.v fifo_in_top.v fifo_in.v fifo_out_top.v fifo_out.v fifo_top.v fp32top.v InlineBlackBoxLut.v  parallel2serial.v pre_process.v serial2parallel.v top_r2.v top.v 
+../rtl/InlineBlackBoxLut.v
+../rtl/divr2.v
+../rtl/fifo_in.v
+../rtl/fifo_in_top.v
+../rtl/fifo_out.v
+../rtl/fifo_out_top.v
+../rtl/fifo_top.v
+../rtl/fp32top.v
+../rtl/parallel2serial.v
+../rtl/pre_process.v
+../rtl/serial2parallel.v
+../rtl/top.v
+../rtl/top_r2.v

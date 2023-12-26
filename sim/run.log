@@ -1,0 +1,244 @@
+Command: vcs -full64 -sverilog +v2k -timescale=1ns/1ns -debug_all +notimingcheck \
++nospecify +vcs+flush+all -o simv -l compile.log -f rtl_list.f -f sim_list.f -P /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/novas.tab \
+/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -R +fsdb+autoflush \
+-l run.log
+                         Chronologic VCS (TM)
+        Version O-2018.09-1_Full64 -- Tue Dec 26 15:48:02 2023
+               Copyright (c) 1991-2018 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[DEBUG_DEP] Option will be deprecated
+  The option '-debug_all' will be deprecated in a future release.  Please use 
+  '-debug_acc+all -debug_region+cell+encrypt' instead.
+
+Parsing design file '../rtl/InlineBlackBoxLut.v'
+Parsing design file '../rtl/divr2.v'
+Parsing design file '../rtl/fifo_in.v'
+Parsing design file '../rtl/fifo_in_top.v'
+Parsing design file '../rtl/fifo_out.v'
+Parsing design file '../rtl/fifo_out_top.v'
+Parsing design file '../rtl/fifo_top.v'
+Parsing design file '../rtl/fp32top.v'
+Parsing design file '../rtl/parallel2serial.v'
+Parsing design file '../rtl/pre_process.v'
+Parsing design file '../rtl/serial2parallel.v'
+Parsing design file '../rtl/top.v'
+Parsing design file '../rtl/top_r2.v'
+Parsing design file '../tb/srt2_tb.v'
+Top Level Modules:
+       srt2_tb
+TimeScale is 1 ns / 1 ps
+Starting vcs inline pass...
+2 modules and 0 UDP read.
+recompiling module srt2_tb
+	However, due to incremental compilation, only 1 module needs to be compiled. 
+make[1]: Entering directory '/home/ICer/ic_prjs/ic2/sim/csrc'
+rm -f _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+ld -shared  -Bsymbolic  -o .//../simv.daidir//_csrc0.so objs/amcQw_d.o 
+rm -f _csrc0.so
+if [ -x ../simv ]; then chmod -x ../simv; fi
+g++  -o ../simv    -Wl,-rpath-link=./ -Wl,-rpath='$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ \
+-Wl,-rpath='$ORIGIN'/simv.daidir//scsim.db.dir  -rdynamic  -Wl,-rpath=/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib \
+-L/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib     _75694_archive_1.so _prev_archive_1.so \
+_csrc0.so  SIM_l.o  _csrc0.so     rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o          -lzerosoft_rt_stubs -lvirsim -lerrorinf -lsnpsmalloc -lvfs \
+/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a    -lvcsnew \
+-lsimprofile -luclinative /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive -lvcsucli -Wl,-no-whole-archive        _vcs_pli_stub_.o   /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_save_restore_new.o \
+-ldl -lm  -lc -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/home/ICer/ic_prjs/ic2/sim/csrc'
+Command: /home/ICer/ic_prjs/ic2/sim/./simv +v2k +notimingcheck +nospecify +vcs+flush+all -a compile.log +fsdb+autoflush -a run.log
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Dec 26 15:48 2023
+VCD+ Writer O-2018.09-1_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+*Verdi* Loading libsscore_vcs201809.so
+FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'testname.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : Enable +all dumping.
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the SVA assertions, layer (0).
+*Verdi* : End of traversing the SVA assertions.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+unsigned: 271139162 / 1685890237=         0…… 271139162
+ans right!
+unsigned: 220610135 / 1635361210=         0…… 220610135
+ans right!
+unsigned: 170081108 / 1584832183=         0…… 170081108
+ans right!
+unsigned: 119552081 / 1534303156=         0…… 119552081
+ans right!
+unsigned:  69023054 / 1483774129=         0……  69023054
+ans right!
+unsigned:  18494027 / 1433245102=         0……  18494027
+ans right!
+unsigned:4262932296 / 1382716075=         3…… 114784071
+ans right!
+unsigned:4212337733 / 1332187048=         3…… 215776589
+ans right!
+unsigned:4161808706 / 1281658021=         3…… 316834643
+ans right!
+unsigned:4111279679 / 1231128994=         3…… 417892697
+ans right!
+unsigned:4060750652 /    6191007=       655……   5641067
+ans right!
+unsigned:4010221625 /    5993628=       669……    484493
+ans right!
+unsigned:3959692598 /    5796249=       683……    854531
+ans right!
+unsigned:3909163571 /    5598870=       698……   1152311
+ans right!
+unsigned:3875411760 /    5401491=       717……   2542713
+ans right!
+unsigned:3824882733 /    5204111=       734……   5065259
+ans right!
+unsigned:3774353706 /    5006732=       753……   4284510
+ans right!
+unsigned:3723824679 /    4809353=       774……   1385457
+ans right!
+unsigned:3673295652 /    4611974=       796……   2164348
+ans right!
+unsigned:3605989409 /    4414595=       816……   3679889
+ans right!
+unsigned:3555460382 /      22897=    155280……     14222
+ans right!
+unsigned:3504931355 /      22126=    158407……     18073
+ans right!
+unsigned:3454467864 /      21355=    161763……     18999
+ans right!
+unsigned:3403938836 /      20584=    165368……      3924
+ans right!
+unsigned:3353409809 /      19813=    169253……       120
+ans right!
+unsigned:3302880782 /      19042=    173452……      7798
+ans right!
+unsigned:3252351755 /      18271=    178006……      4129
+ans right!
+unsigned:3201822728 /      17244=    185677……      8540
+ans right!
+unsigned:3151293701 /      16473=    191300……      8801
+ans right!
+unsigned:3100764674 /      15702=    197475……     12224
+ans right!
+unsigned:3050235903 /         83=  36749830……        13
+ans right!
+unsigned:2999706876 /         80=  37496335……        76
+ans right!
+unsigned:2949177849 /         77=  38301011……         2
+ans right!
+unsigned:2898648822 /         74=  39170930……         2
+ans right!
+unsigned:2848119795 /         71=  40114363……        22
+ans right!
+unsigned:2797590512 /         68=  41141036……        64
+ans right!
+unsigned:2747061485 /         65=  42262484……        25
+ans right!
+unsigned:2696532458 /         62=  43492459……         0
+ans right!
+unsigned:2646003431 /         59=  44847515……        46
+ans right!
+unsigned:2595474404 /         56=  46347757……        12
+ans right!
+signed:(1) 397461729 / (1)1795369796=(1)         0……(1) 397461729  (0正1负)
+ans right!
+signed:(1) 346932702 / (1)1744840769=(1)         0……(1) 346932702  (0正1负)
+ans right!
+signed:(1) 296403675 / (1)1711088958=(1)         0……(1) 296403675  (0正1负)
+ans right!
+signed:(1) 245874648 / (1)1660559931=(1)         0……(1) 245874648  (0正1负)
+ans right!
+signed:(1) 195345621 / (1)1610030904=(1)         0……(1) 195345621  (0正1负)
+ans right!
+signed:(1) 144816594 / (1)1559501877=(1)         0……(1) 144816594  (0正1负)
+ans right!
+signed:(1)  94287567 / (1)1508972850=(1)         0……(1)  94287567  (0正1负)
+ans right!
+signed:(1)  43693004 / (1)1458443823=(1)         0……(1)  43693004  (0正1负)
+ans right!
+signed:(0)2140647625 / (1)1407914796=(0)         1……(0) 732732829  (0正1负)
+ans right!
+signed:(0)2090118598 / (1)1357385769=(0)         1……(0) 732732829  (0正1负)
+ans right!
+signed:(0)2039589571 / (0)  15072806=(0)       135……(0)   4760761  (0正1负)
+ans right!
+signed:(0)1989060544 / (0)  14875427=(0)       133……(0)  10628753  (0正1负)
+ans right!
+signed:(0)1938531517 / (0)  14678048=(0)       132……(0)   1029181  (0正1负)
+ans right!
+signed:(0)1888002490 / (0)  14480669=(0)       130……(0)   5515520  (0正1负)
+ans right!
+signed:(0)1837473463 / (0)  14283290=(0)       128……(0)   9212343  (0正1负)
+ans right!
+signed:(0)1786944436 / (0)  14085910=(0)       126……(0)  12119776  (0正1负)
+ans right!
+signed:(0)1736415409 / (0)  13888531=(0)       125……(0)    349034  (0正1负)
+ans right!
+signed:(0)1685886382 / (0)  13691152=(0)       123……(0)   1874686  (0正1负)
+ans right!
+signed:(0)1618580139 / (0)  13493773=(0)       119……(0)  12821152  (0正1负)
+ans right!
+signed:(0)1568051112 / (0)  13296394=(0)       117……(0)  12373014  (0正1负)
+ans right!
+signed:(0)1517522085 / (0)     57592=(0)     26349……(0)     30477  (0正1负)
+ans right!
+signed:(0)1466993058 / (0)     56821=(0)     25817……(0)     45301  (0正1负)
+ans right!
+signed:(0)1416464030 / (0)     56050=(0)     25271……(0)     24480  (0正1负)
+ans right!
+signed:(0)1365935003 / (0)     55279=(0)     24709……(0)     46192  (0正1负)
+ans right!
+signed:(0)1315405976 / (0)     54508=(0)     24132……(0)     18920  (0正1负)
+ans right!
+signed:(0)1264876949 / (0)     53737=(0)     23538……(0)     15443  (0正1负)
+ans right!
+signed:(0)1214347922 / (0)     52710=(0)     23038……(0)     14942  (0正1负)
+ans right!
+signed:(0)1163818895 / (0)     51939=(0)     22407……(0)     21722  (0正1负)
+ans right!
+signed:(0)1113289868 / (0)     51168=(0)     21757……(0)     27692  (0正1负)
+ans right!
+signed:(0)1062760841 / (0)     50397=(0)     21087……(0)     39302  (0正1负)
+ans right!
+signed:(0)1012231814 / (0)       218=(0)   4643265……(0)        44  (0正1负)
+ans right!
+signed:(0) 961702787 / (0)       215=(0)   4473036……(0)        47  (0正1负)
+ans right!
+signed:(0) 911173760 / (0)       212=(0)   4297989……(0)        92  (0正1负)
+ans right!
+signed:(0) 860644733 / (0)       209=(0)   4117917……(0)        80  (0正1负)
+ans right!
+signed:(0) 810115450 / (0)       206=(0)   3932599……(0)        56  (0正1负)
+ans right!
+signed:(0) 759586423 / (0)       203=(0)   3741805……(0)         8  (0正1负)
+ans right!
+signed:(0) 709057396 / (0)       200=(0)   3545286……(0)       196  (0正1负)
+ans right!
+signed:(0) 658528369 / (0)       197=(0)   3342783……(0)       118  (0正1负)
+ans right!
+signed:(0) 607999342 / (0)       194=(0)   3134017……(0)        44  (0正1负)
+ans right!
+signed:(0) 557470315 / (0)       191=(0)   2918692……(0)       143  (0正1负)
+ans right!
+clk_period=      10000 ps,freq=        100MHz
+*******pass*******
+******success*****
+******************
+$finish called from file "../tb/srt2_tb.v", line 361.
+$finish at simulation time           9921010000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 9921010000 ps
+CPU Time:      0.870 seconds;       Data structure size:   0.1Mb
+Tue Dec 26 15:48:04 2023
+CPU time: .411 seconds to compile + .247 seconds to elab + .205 seconds to link + .898 seconds in simulation

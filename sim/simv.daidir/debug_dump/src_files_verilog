@@ -1,0 +1,14 @@
+/home/ICer/ic_prjs/ic2/rtl/InlineBlackBoxLut.v
+/home/ICer/ic_prjs/ic2/rtl/divr2.v
+/home/ICer/ic_prjs/ic2/rtl/fifo_in.v
+/home/ICer/ic_prjs/ic2/rtl/fifo_in_top.v
+/home/ICer/ic_prjs/ic2/rtl/fifo_out.v
+/home/ICer/ic_prjs/ic2/rtl/fifo_out_top.v
+/home/ICer/ic_prjs/ic2/rtl/fifo_top.v
+/home/ICer/ic_prjs/ic2/rtl/fp32top.v
+/home/ICer/ic_prjs/ic2/rtl/parallel2serial.v
+/home/ICer/ic_prjs/ic2/rtl/pre_process.v
+/home/ICer/ic_prjs/ic2/rtl/serial2parallel.v
+/home/ICer/ic_prjs/ic2/rtl/top.v
+/home/ICer/ic_prjs/ic2/rtl/top_r2.v
+/home/ICer/ic_prjs/ic2/tb/srt2_tb.v
