@@ -450,6 +450,8 @@ end
 
 initial begin
   out_file=$fopen("./outputfile.coe","w");
+  $fwrite(out_file,"memory_initialization_radix = 2;\n");
+  $fwrite(out_file,"memory_initialization_vector =\n");
 end
 always @(posedge clk2)
 begin
