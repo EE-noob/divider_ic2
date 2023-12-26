@@ -8,8 +8,8 @@ module srt2_tb;
   localparam  LOG_BUFFER_DEPTH = 3;
   localparam  WIDTH = 32;
   localparam  EXPWIDTH = 6;
-  localparam  clk_period=1040;//*10ps
-localparam testdatanum=25;//*8 groups
+  localparam  clk_period=1000;//*10ps
+localparam testdatanum=10;//*8 groups
   // Ports
   reg clk = 0;
   reg rst_n = 0;
@@ -26,6 +26,8 @@ reg [63:0] qrtest;
 reg [31:0] dtest;
 integer cnt;
 integer rightcnt=0;
+integer out_file;
+
 wire [127:0] qplus;
   top #(
     .DATA_WIDTH(DATA_WIDTH ),
@@ -365,11 +367,13 @@ $display("clk_period=%d ps,freq=%dMHz",clk_period*10,1000*100/clk_period);
 $display("*******pass*******");
 $display("******success*****");
 $display("******************");
+   $fclose(out_file);
 end
 else begin
 $display("clk_period=%d ps,freq=%dMHz",clk_period*10,1000*100/clk_period);
   $display("！！！出错了！！！！");
  $display("%derrors in %d testdata",testdatanum*8-rightcnt,testdatanum*8);
+   $fclose(out_file);
 end
 end
 
@@ -435,15 +439,54 @@ end
 
 end
 
-// always@(posedge clk)
-//         begin
-//          $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
-//         end
 
-// always@(negedge clk)
-//         begin
-//          $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
-//         end   
+reg clk2=0;
+
+always
+begin
+ #250 clk2=~clk2;
+end
+
+
+initial begin
+  out_file=$fopen("./outputfile.coe","w");
+end
+
+
+​always @(posedge clk2)
+begin
+    $fwrite(out_file,"%b",sign_out)​​;      //fwrite写下一个数不会自动转行，可以加\n来转行
+    $fwrite(out_file,"%b",pull_out)​​;
+    $fwrite(out_file,"%b",data_out_out)​​;
+
+    $fwrite(out_file,"%b",data_in_in)​​;
+    $fwrite(out_file,"%b",push_in)​​;
+    $fwrite(out_file,"%b",sign)​​;
+    $fwrite(out_file,"%b",clk)​​;
+    $fwrite(out_file,"%b",select)​​;
+    $fwrite(out_file,"%b",rst_n)​​;
+    $fwrite(out_file,"\n")​​;
+    // $fwrite(out_file,"%d",$signed(reg_data))​​;     //fdisplay则会自动转行
+end
+
+always @(negedge clk2) 
+begin
+    $fwrite(out_file,"%b",sign_out)​​;      //fwrite写下一个数不会自动转行，可以加\n来转行
+    $fwrite(out_file,"%b",pull_out)​​;
+    $fwrite(out_file,"%b",data_out_out)​​;
+
+    $fwrite(out_file,"%b",data_in_in)​​;
+    $fwrite(out_file,"%b",push_in)​​;
+    $fwrite(out_file,"%b",sign)​​;
+    $fwrite(out_file,"%b",clk)​​;
+    $fwrite(out_file,"%b",select)​​;
+    $fwrite(out_file,"%b",rst_n)​​;
+    $fwrite(out_file,"\n")​​;
+    // $fwrite(out_file,"%d",$signed(reg_data))​​;     //fdisplay则会自动转行
+end
+
+
+
 
 
 endmodule
