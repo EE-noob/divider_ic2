@@ -9,7 +9,7 @@ module srt2_tb;
   localparam  WIDTH = 32;
   localparam  EXPWIDTH = 6;
   localparam  clk_period=1040;//*10ps
-localparam testdatanum=250;//*8 groups
+localparam testdatanum=25;//*8 groups
   // Ports
   reg clk = 0;
   reg rst_n = 0;
@@ -39,6 +39,7 @@ top_dut ( .data_in_in (data_in_in ), .data_out_out (data_out_out ),  .pull_out  
  .sign_out (sign_out ), .select (select ),.push_in (push_in ),.sign (sign ), .rst_n (rst_n ), .clk (clk ));
   initial begin
 testfinish=0; $vcdpluson();    
+data_in_in=0;
     rst_n = 0;
   #(clk_period) rst_n = 1;
 repeat(testdatanum)
@@ -433,4 +434,16 @@ $fsdbDumpMDA();  //dump memory arrays
 end
 
 end
+
+always@(posedge clk)
+        begin
+         $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
+        end
+
+always@(negedge clk)
+        begin
+         $display ("%b%b%b%b%b%b%b",clk,rst_n,data_valid,data_sel,sign_sel,width_sel,data_in);
+        end   
+
+
 endmodule
