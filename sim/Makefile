@@ -34,8 +34,8 @@ RUN_COV = -R $(COV_SW) -cm_name $(vdb_name) -cm_dir ./$(cov_file_name) -l run.lo
 RUN_VER = -R +fsdb+autoflush -l run.log
 #************command************
 #verdi
-srtsim:srtfl run_vcs vd
-fpsim:fpfl run_vcs vd
+srtsim:srtfl run_vcs 
+fpsim:fpfl run_vcs 
 versim: run_vcs vd
 fl:
 	find ../rtl -name "*v" > rtl_list.f;find ../tc -name "*v" > sim_list.f;
