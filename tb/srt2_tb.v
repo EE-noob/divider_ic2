@@ -451,9 +451,7 @@ end
 initial begin
   out_file=$fopen("./outputfile.coe","w");
 end
-
-
-​always @(posedge clk2)
+always @(posedge clk2)
 begin
     $fwrite(out_file,"%b",sign_out)​​;      //fwrite写下一个数不会自动转行，可以加\n来转行
     $fwrite(out_file,"%b",pull_out)​​;
@@ -485,8 +483,6 @@ begin
     // $fwrite(out_file,"%d",$signed(reg_data))​​;     //fdisplay则会自动转行
 end
 
-
-
-
-
 endmodule
+
+
