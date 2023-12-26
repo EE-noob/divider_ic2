@@ -420,4 +420,17 @@ end
 end
 end
 
+initial
+begin
+//if($test$plusargs("DUMP_FSDB"))
+begin
+$fsdbDumpfile("testname.fsdb");  //记录波形，波形名字testname.fsdb
+$fsdbDumpvars("+all");  //+all参数，dump SV中的struct结构体
+$fsdbDumpSVA();   //将assertion的结果存在fsdb中
+$fsdbDumpMDA();  //dump memory arrays
+//0: 当前级及其下面所有层级，如top.A, top.A.a，所有在top下面的多维数组均会被dump
+//1: 仅仅dump当前组，也就是说，只dump top这一层的多维数组。
+end
+
+end
 endmodule
