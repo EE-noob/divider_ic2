@@ -36,7 +36,7 @@ reg [63:0] realfrac;
  real  e;
 real  ritioe;
 real  average_e=0;
-  pad #(
+  top #(
     .DATA_WIDTH(DATA_WIDTH ),
     .BUFFER_DEPTH(BUFFER_DEPTH ),
     .LOG_BUFFER_DEPTH(LOG_BUFFER_DEPTH ),
@@ -44,7 +44,7 @@ real  average_e=0;
     .EXPWIDTH (
         EXPWIDTH )
   )
-pad_dut ( .data_in_in (data_in_in ), .data_out_out (data_out_out ),  .pull_out  ( pull_out) ,
+top_dut ( .data_in_in (data_in_in ), .data_out_out (data_out_out ),  .pull_out  ( pull_out) ,
  .sign_out (sign_out ), .select (select ),.push_in (push_in ),.sign (sign ), .rst_n (rst_n ), .clk (clk ));
   initial begin
 repeat(testdatanum)

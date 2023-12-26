@@ -27,7 +27,7 @@ reg [31:0] dtest;
 integer cnt;
 integer rightcnt=0;
 wire [127:0] qplus;
-  pad #(
+  top #(
     .DATA_WIDTH(DATA_WIDTH ),
     .BUFFER_DEPTH(BUFFER_DEPTH ),
     .LOG_BUFFER_DEPTH(LOG_BUFFER_DEPTH ),
@@ -35,7 +35,7 @@ wire [127:0] qplus;
     .EXPWIDTH (
         EXPWIDTH )
   )
-pad_dut ( .data_in_in (data_in_in ), .data_out_out (data_out_out ),  .pull_out  ( pull_out) ,
+top_dut ( .data_in_in (data_in_in ), .data_out_out (data_out_out ),  .pull_out  ( pull_out) ,
  .sign_out (sign_out ), .select (select ),.push_in (push_in ),.sign (sign ), .rst_n (rst_n ), .clk (clk ));
   initial begin
 testfinish=0; $vcdpluson();    
